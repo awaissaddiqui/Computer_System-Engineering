@@ -8,7 +8,7 @@ using namespace std;
 void intro();
 struct patient_reg{
    string name;
-   int age;                // data members for registration of user
+   int age;                /// data members for registration of user
    string gender;
    string area;
 };
