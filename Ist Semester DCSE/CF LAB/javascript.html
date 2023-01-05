@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Calculator</title>
+      <style media="screen">
+      h1{
+        text-align: center;
+        color: green;
+      }
+      font{
+        margin-left: 20%;
+      }
+      #bt{
+        margin-left: 40%;
+        padding-left: 3%;
+        padding-right: 3%;
+        background-color: aqua;
+      }
+      p{
+        text-align: center;
+        color: hsl(0, 100%, 30%);
+        background-color: lightgreen;
+        border: 4px;
+        padding-right: 8%;
+      }
+      body{
+        background-color: rgba(0, 0, 255, 0.3);
+      }
+
+      </style>
+
+    <script>
+    function cal(){
+      var nu1, po, nu2;
+      nu1 = parseInt(document.getElementById("nu1").value);
+      po  = document.getElementById("po").value;
+      nu2 = parseInt(document.getElementById("nu2").value);
+
+      if (po =="+") {
+        document.getElementById("po").value;
+        document.getElementById("p").innerHTML=nu1+nu2;
+
+      }else if (po =="-"){
+        document.getElementById("po").value;
+        document.getElementById("p").innerHTML=nu1-nu2;
+
+      }else if (po =="*") {
+        document.getElementById("po").value;
+        document.getElementById("p").innerHTML=nu1*nu2;
+
+      }else if (po =="/") {
+        document.getElementById("po").value;
+        document.getElementById("p").innerHTML=nu1/nu2;
+
+      }else if (po =="%") {
+        document.getElementById("po").value;
+        document.getElementById("p").innerHTML=nu1%nu2;
+      }else {
+        document.getElementById("p").innerHTML="Wrong Symbol"
+      }
+
+
+    }
+        </script>
+
+    </head>
+    <body>
+      <h1><b><q>My Calculator</q><b></h1><br>
+      <font size="+2" color="indianred">
+      &nbsp;
+      <label><b>Number 1</b></label>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <label><b>Symbol</b></label>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+
+      <label><b>Number 2</b></label><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="number" id="nu1" placeholder="Enter number">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <input type="text" id="po" placeholder="Select Operator">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <input type="number" id="nu2" placeholder="Enter number"><br><br><br>
+     </font>
+
+    <button id="bt" onclick="cal()"><b>Calculate<b></button><br><br><br>
+     <font size="+2" color="rgba(255, 0, 0, 0.3)">
+      <p id="p"></p>
+    </font>
+    </body>
+    </html>

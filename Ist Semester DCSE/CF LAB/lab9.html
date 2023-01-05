@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage</title>
+      <style>
+          body{
+              background-color: darkseagreen;
+          }
+          label{
+              color: darkred;
+          }
+          h1{
+              color: indianred;
+          }
+          button{
+              color: darkred;
+              margin-left: 11%;
+          }
+       
+      
+      
+      
+      </style>
+      <script>
+          function ok(){
+              var name, et, usrnm, pw, a1;
+              name = document.getElementById("name").value;
+              document.getElementById("p1").innerHTML=name;
+              
+              var et = document.getElementById("et").value;
+              document.getElementById("p2").innerHTML=et;
+              
+              var usrnm = document.getElementById("usrnm").value;
+              document.getElementById("p3").innerHTML=usrnm;
+              
+              var pw = document.getElementById("pw").value;
+              document.getElementById("p4").innerHTML=pw;
+              
+             var a1 = document.getElementById("a1").value;
+              document.getElementById("p5").innerHTML=a1;
+              
+             
+          }
+       </script>
+  </head>
+  <body>
+    <h1 style="text-align: center"><b><q>Biodata</q></b></h1>
+      
+    <form style="padding-left: 150px">
+        
+      <label ><b>Name&nbsp;</b></label>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+      <input id="name"  type="text"  placeholder="Write your name" ><br><br>
+      <label ><b>Reg No&nbsp;</b>
+          &nbsp;
+          &nbsp;
+    <input id="et" type="text"  placeholder="Enter your ETEA ID" ></label><br><br>
+      <label ><b>Username&nbsp;</b><input id="usrnm" type="text" placeholder="example@123"></label><br><br>
+
+      <label><b>Password&nbsp;</b><input id="pw" type="password" placeholder="upto eight characters"></label><br><br>
+        <label><b>Gender&nbsp;</b></label>
+         &nbsp;
+         &nbsp;
+        <select name="a1" id="a1" size="2">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br><br>
+        
+         <label><b>Courses :</b></label><br>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        <label>Computer Fundamental</label>
+        <input type="checkbox" name="Computer Fundamental"><br>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        <label>Computer Fundamental Lab</label>
+        <input type="checkbox" value="Computer Fundamental Lab"><br><br>
+        
+
+        <label><b>Are The Courses Are Easy ?</b></label><input  type="radio"><br><br>        
+    </form><br>
+              <button type="submit" onclick="ok()" ><b>Click Here To Submit</b></button><br>
+      <fieldset>
+<font size="+2" color="purple" align="center">
+      <p id="p1"></p>
+      <p id="p2"></p>
+      <p id="p3"></p>
+      <p id="p4"></p>
+      <p id="p5"></p>
+      <p></p>
+      </font>
+          </fieldset>
+    </body>
+</html>
