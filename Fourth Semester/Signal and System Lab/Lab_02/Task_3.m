@@ -1,3 +1,4 @@
+% Task 3
 clear all
 clc
 % Using colon notation
