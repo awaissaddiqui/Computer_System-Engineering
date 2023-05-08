@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chat App</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+       function setUsername(){
+        socket.emit('setUsername',document.getElementById('name').value)
+        };
+        var user;
+        socket.on('userExits',(data)=>{
+            document.getElementById("error-container").innerHTML = data;
+        })
+        socket.on('userSet',(data)=>{
+            user = data.username;
+            document.body.innerHTML = '<input type="text" id="message">\
+             <button type="button" name="button" onclick="sendMessage()">send</button>\
+             <div id="message-container"></div>';
+        })
+        function sendMessage(){
+         var msg = document.getElementById('message').value;
+         if(msg){
+            socket.emit('msg', {"message": "msg", "user": "user"});
+         }
+        }
+        socket.on('newmsg', function(data){
+         if(user){
+            document.getElementById('message-container').innerHTML +='<div><b>' + data.user + '</b>: ' + data.message + '</div>'
+         }
+        })
+    </script>
+</head>
+<body>
+    <div id="error-container"></div>
+    <input type="text" name="name" value="" placeholder="Enter your name!">
+    <button type="button" name="button">Let chat!</button>
+</body>
+</html>
