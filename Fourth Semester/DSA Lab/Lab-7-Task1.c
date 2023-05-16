@@ -15,10 +15,7 @@ int main(){
 	printf("Add node to list\n");
 		Add(5);
 		Add(50);
-		Add(60);
-	printf("\nTreverse  Linked List\n");
-	Traverse();
-	printf("Which Element you want to Delete From Linked List\n");
+		Add(60);rintf("Which Element you want to Delete From Linked List\n");
 	scanf("%d",&inputData);
 	Delete(inputData);
 	printf("Print Linked List\n");
