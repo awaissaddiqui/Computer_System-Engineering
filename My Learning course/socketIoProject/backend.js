@@ -11,15 +11,16 @@ io.on('connection',(socket)=>{
     socket.on('setUsername', (data)=>{
         if(users.indexOf(data)> -1){
             socket.emit('userExists', data + 'username is already taken')
-            console.log(data);
         }
         else{
             users.push(data);
-            socket.emit('userSet',{"username": "data"});
+            socket.emit('userSet',{username: data});
+           // console.log(data);
         }
     });
     socket.on('msg',(data)=>{
         io.sockets.emit('newmsg',data);
+        console.log(data);
     })
 })
 
