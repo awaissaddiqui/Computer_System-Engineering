@@ -1,4 +1,3 @@
-import numpy as np
 
 
 
@@ -7,6 +6,7 @@ The values and prob arguments are converted to NumPy
  arrays using np.asarray() to ensure that they can be used
  for mathematical operations.
 '''
+import numpy as np
 def expected_value(values, prob):
     values = np.asarray(values)
     prob = np.asarray(prob)

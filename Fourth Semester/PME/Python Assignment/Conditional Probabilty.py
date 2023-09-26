@@ -6,8 +6,8 @@ probability that both balls are black.
 P[A|b]=P[A inter B]/P[B]
 '''
 sample_space=["Black","Black","White","White","White"]
-W=3
-B=2
+W=len([x for x in sample_space if x == 'White'])
+B=len([x for x in sample_space if x == 'Black'])
 size_of_S=len(sample_space)
 
 #P[B2 intersection B1]= P[B2|B1]/P[B1];
@@ -25,14 +25,11 @@ def Prob_B2_B1(sample_space, W, B):
     Prob_W2_B1=W/newSize
     print(f"Probabilty of B2 given B1= {B}/{newSize} = ",Prob_B2_B1)
     print(f"Probabilty of W2 given B1= {W}/{newSize} = ",Prob_W2_B1)
-    
     print(newArray)
     #print(newSize)
-
     return Prob_B2_B1
 
 probabilty_B2_B1=Prob_B2_B1(sample_space, W, B)
-
 P_B1_inter_B2=probabilty_B2_B1 * probability_B1
 print("P[B1 |-| B2] = ",P_B1_inter_B2)
 

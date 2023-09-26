@@ -9,7 +9,9 @@ size=len(outcome_Zeta)
 prob=1/size
 print(prob)
 result=stats.binom.pmf(outcome_Zeta,2,prob)
-print("P[x=0],P[x=1]= ",result)
+for i in range(len(result)):
+    print(f"P[{i}]= ",result[i])
+
 plot.bar(outcome_Zeta, result)
 plot.show()
 
